@@ -1,0 +1,149 @@
+/* Calendar Styles */
+.calendar-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar-header div {
+    padding: 10px;
+    border-right: 1px solid #dee2e6;
+}
+
+.calendar-header div:last-child {
+    border-right: none;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: #dee2e6;
+}
+
+.calendar-day {
+    background: white;
+    min-height: 100px;
+    border: 1px solid #dee2e6;
+    position: relative;
+    padding: 5px;
+    cursor: default;
+}
+
+.calendar-day.other-month {
+    background: #f8f9fa;
+    color: #6c757d;
+}
+
+.calendar-day.today {
+    background: #e7f3ff;
+    font-weight: bold;
+}
+
+.calendar-day .day-number {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calendar-day .leave-event {
+    font-size: 10px;
+    padding: 1px 3px;
+    margin: 1px 0;
+    border-radius: 3px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    text-align: center;
+}
+
+.calendar-day .leave-event.approved {
+    background-color: #28a745; /* Green */
+}
+
+.calendar-day .leave-event.pending {
+    background-color: #ffc107; /* Yellow */
+    color: #212529;
+}
+
+.calendar-day .leave-event.rejected {
+    background-color: #dc3545; /* Red */
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    margin-right: 5px;
+    background-color: #28a745; /* Default green */
+}
+
+.legend-color.approved {
+    background-color: #28a745; /* Green */
+}
+
+.legend-color.pending {
+    background-color: #ffc107; /* Yellow */
+}
+
+.legend-color.rejected {
+    background-color: #dc3545; /* Red */
+}
+
+.calendar-navigation {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#current-month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    pointer-events: none;
+    max-width: 250px;
+    word-wrap: break-word;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}

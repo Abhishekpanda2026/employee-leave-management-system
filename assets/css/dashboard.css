@@ -1,0 +1,72 @@
+/* Dashboard Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.navbar-brand {
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+/* Leave balance cards */
+.leave-balance-card {
+    transition: transform 0.2s;
+}
+
+.leave-balance-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Status badges */
+.status-badge {
+    font-size: 0.8em;
+    padding: 0.5em 0.75em;
+}
+
+/* Table styles */
+.table th {
+    border-top: none;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9em;
+    }
+}
+
+/* Custom dashboard card styles */
+.dashboard-card {
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.form-select:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
